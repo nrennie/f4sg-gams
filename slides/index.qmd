@@ -58,6 +58,23 @@ Slides: [nrennie.github.io/f4sg-gams](https://nrennie.github.io/f4sg-gams)
 
 # What are Generalised Additive Models? {background-color="#D9DBDB"}
 
+## Data
+
+What is the data?
+
+## Data
+
+How to download:
+
+```{r}
+#| eval: false
+covid <- readr::read_csv("data/covid.csv")
+```
+
+## Data
+
+## Data pre-processing
+
 ## Live demo!
 
 <br><br>
