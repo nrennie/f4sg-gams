@@ -1,3 +1,3 @@
-# Generlised Additive Models in R
+# Forecasting with Generalised Additive Models (GAMs) in R
 
-Materials for the "Generlised Additive Models in R" workshop for Forecasting for Social Good.
+Materials for the "Forecasting with Generalised Additive Models (GAMs) in R" workshop for Forecasting for Social Good.
