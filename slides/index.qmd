@@ -1,0 +1,161 @@
+---
+title: "Forecasting with Generalised Additive Models (GAMs) in R"
+subtitle: "Forecasting for Social Good<br><small>21 February 2024</small>"
+author: "Dr Nicola Rennie"
+format:
+  LUstyle-revealjs:
+    self-contained: true
+    footer: "{{< fa envelope >}} [n.rennie@lancaster.ac.uk](mailto:n.rennie@lancaster.ac.uk) {{< fa globe >}} [nrennie.rbind.io](https://nrennie.rbind.io/) {{< fa brands linkedin >}} [nicola-rennie](https://www.linkedin.com/in/nicola-rennie/)"
+---
+
+# Welcome!
+
+## About me
+
+::: columns
+::: {.column .right}
+
+Lecturer in Health Data Science at [Lancaster Medical School](https://chicas.lancaster-university.uk/).
+
+<br>
+
+Academic background in statistics, with experience in data science consultancy.
+
+<br>
+
+Blog about R and data science at [nrennie.rbind.io/blog](https://nrennie.rbind.io/blog/).
+
+:::
+
+::: {.column}
+
+![](images/CHICASlogo.png){fig-align="center" fig-alt="CHICAS logo" width=100%}
+
+:::
+:::
+
+## What to expect during this workshop
+
+The workshop will run for *2 hours*.
+
+* Combines slides, live coding examples, and exercises for you to participate in.
+
+* Ask questions in the chat throughout!
+
+## What you need for this workshop
+
+* You are comfortable with simple operations in R.
+
+* You know how to perform linear regression.
+
+## Workshop resources
+
+GitHub: [github.com/nrennie/f4sg-gams](https://github.com/nrennie/f4sg-gams)
+
+<br>
+
+Slides: [nrennie.github.io/f4sg-gams](https://nrennie.github.io/f4sg-gams)
+
+# What are Generalised Additive Models? {background-color="#D9DBDB"}
+
+## Live demo!
+
+<br><br>
+
+::: {.fragment}
+
+See `examples/example_01.R` for full code.
+
+:::
+
+## Exercise 1
+
+Open `exercises/exercise_01.R` for prompts.
+
+* Instruction
+
+. . . 
+
+See `exercise_solutions/exercise_solutions_01.R` for full solution.
+
+
+
+# Part 2 {background-color="#D9DBDB"}
+
+## Live demo!
+
+<br><br>
+
+::: {.fragment}
+
+See `examples/example_02.R` for full code.
+
+:::
+
+## Exercise 2
+
+Open `exercises/exercise_02.R` for prompts.
+
+* Instruction
+
+. . . 
+
+See `exercise_solutions/exercise_solutions_02.R` for full solution.
+
+
+# Part 3 {background-color="#D9DBDB"}
+
+## Live demo!
+
+<br><br>
+
+::: {.fragment}
+
+See `examples/example_03.R` for full code.
+
+:::
+
+## Exercise 3
+
+Open `exercises/exercise_03.R` for prompts.
+
+* Instruction
+
+. . . 
+
+See `exercise_solutions/exercise_solutions_03.R` for full solution.
+
+
+
+
+## Useful links
+
+GitHub: [github.com/nrennie/f4sg-gams](https://github.com/nrennie/f4sg-gams)
+
+<br>
+
+Slides: [nrennie.github.io/f4sg-gams](https://nrennie.github.io/f4sg-gams)
+
+## 
+
+::: columns
+::: {.column}
+
+<br>
+
+{{< fa brands linkedin >}} [nicola-rennie](https://www.linkedin.com/in/nicola-rennie/)
+
+{{< fa brands mastodon >}} [\@fosstodon.org/\@nrennie](https://fosstodon.org/deck/@nrennie)
+
+{{< fa brands github >}} [nrennie](https://github.com/nrennie)
+
+{{< fa globe >}} [nrennie.rbind.io](https://nrennie.rbind.io/)
+
+{{< fa briefcase >}} [chicas.lancaster-university.uk](https://chicas.lancaster-university.uk/)
+
+:::
+::: {.column}
+
+
+:::
+:::
