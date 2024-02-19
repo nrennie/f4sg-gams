@@ -97,7 +97,19 @@ See `exercise_solutions/exercise_solutions_01.R` for full solution.
 
 
 
-# Part 2 {background-color="#D9DBDB"}
+# What are generalised additive models? {background-color="#D9DBDB"}
+
+## Sometimes the type of model is obvious
+
+2x2 linear and seasonal patterns
+
+## noisy data - ar model
+
+## smooth
+
+example of smooth data
+
+# What are generalised additive models?
 
 ## Live demo!
 
