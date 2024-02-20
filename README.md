@@ -47,7 +47,9 @@ By the end of the workshop, participants will:
 Required:
 
 * {mgcv}
+* {gratia}
 
 Optional:
 
 * {COVID19}
+* {tidyverse}
