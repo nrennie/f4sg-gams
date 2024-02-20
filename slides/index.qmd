@@ -411,11 +411,21 @@ See `exercise_solutions/exercise_solutions_02.R` for full solution.
 
 # Predicting with GAMs {background-color="#D9DBDB"}
 
-## Model selection
+## After you've fitted a GAM...
 
-## Predicting and forecasting
+::: {.incremental}
 
-## Model interpretation
+* Is it a reasonable model?
+
+* Is it better than other models?
+
+* How well does it fit to the data?
+
+* What are the forecasted values?
+
+* How do we interpret the model?
+
+:::
 
 ## Live demo!
 
@@ -431,7 +441,13 @@ See `examples/example_03.R` for full code.
 
 Open `exercises/exercise_03.R` for prompts.
 
-* Instruction
+* Run `gam.check()` on your GAM from Exercise 2. Do you need to refit?
+
+* Obtain the fitted values.
+
+* Make a forecast for the range of the test data.
+
+* Inspect the contribution of different terms.
 
 ```{r}
 #| label: ex-3-timer
