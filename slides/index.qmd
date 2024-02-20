@@ -484,8 +484,8 @@ See `exercise_solutions/exercise_solutions_03.R` for full solution.
 ## Are observations independent?
 
 ```{r}
-#| echo: false
-acf(gbr_train$confirmed, main = "ACF plot of confirmed cases")
+#| echo: true
+acf(gbr_data$confirmed, main = "ACF plot of confirmed cases")
 ```
 
 ## Generalized additive mixed effect models (GAMMs)
