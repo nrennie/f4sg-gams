@@ -26,4 +26,7 @@ plot(gbr_train$tests, gbr_train$confirmed,
 # fit a linear model using gam()
 lm_gam <- gam(confirmed ~ date_obs, data = gbr_train)
 coef(lm_gam)
-
+plot(gbr_train$date_obs, gbr_train$confirmed,
+     type = "l",
+     xlab = "Day of observation", ylab = "Confirmed cases per day")
+lines(gbr_train$date_obs, lm_gam$fitted.values, col = "red")
