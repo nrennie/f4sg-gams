@@ -15,6 +15,7 @@ covid_raw <- covid_data |>
 
 # save to CSV
 readr::write_csv(covid_raw, "data/covid_raw.csv")
+covid_raw <- readr::read_csv("data/covid_raw.csv")
 
 # get count data instead of cumulative
 covid <- covid_raw |> 
@@ -22,10 +23,12 @@ covid <- covid_raw |>
     dplyr::across(deaths:people_fully_vaccinated, ~ .x - lag(.x))
   ) |> 
   tidyr::drop_na() |> 
+  dplyr::group_by(iso_alpha_3) |> 
+  dplyr::mutate(date_obs = row_number()) |> 
+  dplyr::ungroup() |> 
   dplyr::filter(if_all(where(is.numeric), ~ .x >= 0)) |> 
   dplyr::mutate(
-    day = lubridate::wday(date),
-    date_obs = row_number()
+    day = lubridate::wday(date, week_start = 1)
   ) 
 
 # save to CSV
