@@ -485,6 +485,7 @@ See `exercise_solutions/exercise_solutions_03.R` for full solution.
 
 ```{r}
 #| echo: true
+#| fig-align: center
 acf(gbr_data$confirmed, main = "ACF plot of confirmed cases")
 ```
 
