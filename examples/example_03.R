@@ -1,5 +1,5 @@
 # Model comparison
-AIC(gam_4)
+AIC(gam_2)
 AIC(gam_5)
 
 # Model check
