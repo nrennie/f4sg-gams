@@ -21,7 +21,7 @@ plot(gbr_train$date, gbr_train$confirmed,
 
 # Which other variables may be of interest?
 plot(gbr_train$tests, gbr_train$confirmed,
-     xlab = "Tests performed", ylab = "Cumulative cases per 100,000")
+     xlab = "Tests performed", ylab = "Confirmed cases per day")
 
 # fit a linear model using gam()
 lm_gam <- gam(confirmed ~ date_obs, data = gbr_train)
