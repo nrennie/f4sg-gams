@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800mm"
+   height="400mm"
+   viewBox="0 0 800 400"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="gams-flex.svg"
+   inkscape:export-filename="gams-flex.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.34609638"
+     inkscape:cx="1394.1203"
+     inkscape:cy="784.46356"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <rect
+       x="141.57906"
+       y="898.59362"
+       width="731.01024"
+       height="335.16675"
+       id="rect9" />
+    <linearGradient
+       id="linearGradient8"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#800080;stop-opacity:1;"
+         offset="0"
+         id="stop8" />
+      <stop
+         style="stop-color:#1d9dad;stop-opacity:1;"
+         offset="1"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient9"
+       x1="37.573938"
+       y1="174.30116"
+       x2="742.19437"
+       y2="174.30116"
+       gradientUnits="userSpaceOnUse" />
+    <rect
+       x="141.57906"
+       y="898.59363"
+       width="731.01025"
+       height="335.16675"
+       id="rect9-8" />
+    <rect
+       x="141.57906"
+       y="898.59363"
+       width="731.01025"
+       height="335.16675"
+       id="rect9-9" />
+    <rect
+       x="141.57906"
+       y="898.59363"
+       width="731.01025"
+       height="335.16675"
+       id="rect9-95" />
+    <rect
+       x="141.57906"
+       y="898.59363"
+       width="731.01025"
+       height="335.16675"
+       id="rect9-9-8" />
+    <rect
+       x="141.57906"
+       y="898.59363"
+       width="731.01025"
+       height="335.16675"
+       id="rect9-9-6" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g11">
+      <g
+         id="g10"
+         transform="translate(9.749463,54.277992)">
+        <rect
+           style="fill:url(#linearGradient9);fill-opacity:1"
+           id="rect1"
+           width="703.32043"
+           height="70.332047"
+           x="38.223938"
+           y="139.13513" />
+        <text
+           xml:space="preserve"
+           transform="matrix(0.26458333,0,0,0.26458333,0,-20.70878)"
+           id="text9"
+           style="font-style:normal;font-weight:normal;font-size:74.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect9);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
+             x="141.57812"
+             y="966.53113"
+             id="tspan3"><tspan
+               style="font-family:Roboto;-inkscape-font-specification:Roboto"
+               id="tspan1">Less flexible,&#10;</tspan></tspan><tspan
+             x="141.57812"
+             y="1062.4685"
+             id="tspan5"><tspan
+               style="font-family:Roboto;-inkscape-font-specification:Roboto"
+               id="tspan4">Easy to interpret</tspan></tspan></text>
+        <text
+           xml:space="preserve"
+           transform="matrix(0.26458397,0,0,0.26458333,509.17042,-20.70878)"
+           id="text9-6"
+           style="font-style:normal;font-weight:normal;font-size:74.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect9-8);display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="533.93256"
+           y="0"><tspan
+             x="430.89692"
+             y="966.53113"
+             id="tspan7"><tspan
+               style="font-family:Roboto;-inkscape-font-specification:Roboto;text-align:end;text-anchor:end"
+               id="tspan6">More flexible,&#10;</tspan></tspan><tspan
+             x="329.90729"
+             y="1062.4685"
+             id="tspan9"><tspan
+               style="font-family:Roboto;-inkscape-font-specification:Roboto;text-align:end;text-anchor:end"
+               id="tspan8">Hard to interpret</tspan></tspan></text>
+        <text
+           xml:space="preserve"
+           transform="matrix(0.26458333,0,0,0.26458333,1.4986221,-135.39891)"
+           id="text9-5"
+           style="font-style:normal;font-weight:normal;font-size:85.3333px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect9-9);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
+             x="141.57812"
+             y="977.05947"
+             id="tspan12"><tspan
+               style="font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab'"
+               id="tspan11">Linear models</tspan></tspan></text>
+        <text
+           xml:space="preserve"
+           transform="matrix(0.26458333,0,0,0.26458333,559.08769,-133.95116)"
+           id="text9-5-9"
+           style="font-style:normal;font-weight:normal;font-size:85.3333px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect9-9-8);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
+             x="141.57812"
+             y="977.05947"
+             id="tspan14"><tspan
+               style="font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab'"
+               id="tspan13">Black Box ML</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,265.44818,-190.48533)"
+         id="text9-5-2"
+         style="font-style:normal;font-weight:normal;font-size:85.3333px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect9-9-6);display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         x="318.33566"
+         y="0"><tspan
+           x="268.50075"
+           y="977.05947"
+           id="tspan16"><tspan
+             style="font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab';text-align:center;text-anchor:middle"
+             id="tspan15">Generalised </tspan></tspan><tspan
+           x="177.70912"
+           y="1084.5492"
+           id="tspan18"><tspan
+             style="font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab';text-align:center;text-anchor:middle"
+             id="tspan17">Additive Models </tspan></tspan><tspan
+           x="357.10488"
+           y="1192.0388"
+           id="tspan20"><tspan
+             style="font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab';text-align:center;text-anchor:middle"
+             id="tspan19">(GAMs)</tspan></tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:2.835;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+         d="m 400.00537,133.8525 c -0.006,47.68631 -0.006,47.68631 -0.006,47.68631"
+         id="path10" />
+    </g>
+  </g>
+</svg>
