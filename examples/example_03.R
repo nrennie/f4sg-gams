@@ -1,3 +1,7 @@
+# Model comparison
+AIC(gam_4)
+AIC(gam_5)
+
 # Model check
 gam.check(gam_5)
 
