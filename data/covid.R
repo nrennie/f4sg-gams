@@ -11,17 +11,22 @@ covid_raw <- covid_data |>
                 vaccines, people_vaccinated, people_fully_vaccinated,
                 hosp, population) |> 
   dplyr::filter(date >= lubridate::ymd("20210110")) |> 
-  dplyr::filter(date <= lubridate::ymd("20220519")) 
+  dplyr::filter(date <= lubridate::ymd("20220111")) 
 
 # save to CSV
 readr::write_csv(covid_raw, "data/covid_raw.csv")
 
-# rescale per 100,000 population
+# get count data instead of cumulative
 covid <- covid_raw |> 
   dplyr::mutate(
-    dplyr::across(deaths:hosp, ~ (100000 * .x) / population)
+    dplyr::across(deaths:people_fully_vaccinated, ~ .x - lag(.x))
   ) |> 
-  dplyr::select(-population)
+  tidyr::drop_na() |> 
+  dplyr::filter(if_all(where(is.numeric), ~ .x >= 0)) |> 
+  dplyr::mutate(
+    day = lubridate::wday(date),
+    date_obs = row_number()
+  ) 
 
 # save to CSV
 readr::write_csv(covid, "data/covid.csv")
