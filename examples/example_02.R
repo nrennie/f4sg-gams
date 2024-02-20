@@ -14,17 +14,23 @@ gam_2 <- gam(confirmed ~ s(date_obs) + s(tests), data = gbr_train)
 coef(gam_2)
 plot(gam_2)
 
+gam_3 <- gam(confirmed ~ s(date_obs) + s(day, k = 7), data = gbr_train, method = "REML")
+plot(gbr_train$date_obs, gbr_train$confirmed,
+     type = "l",
+     xlab = "Day of observation", ylab = "Confirmed cases per day")
+lines(gbr_train$date_obs, gam_3$fitted.values, col = "red")
+
 # Controlling smoothness
 # Bigger value = smoother
-gam_3 <- gam(confirmed ~ s(date_obs, sp = 0.4), data = gbr_train)
-plot(gam_3)
+gam_4 <- gam(confirmed ~ s(date_obs, sp = 0.4), data = gbr_train)
+plot(gam_4)
 
 # "REML"
-gam_4 <- gam(confirmed ~ s(date_obs), data = gbr_train, method = "REML")
-plot(gam_4)
+gam_5 <- gam(confirmed ~ s(date_obs) + s(day, k = 7), data = gbr_train, method = "REML")
+plot(gam_5)
 
 # Visualising
 library(gratia)
-draw(gam_4)
+draw(gam_5)
 
-# Interpretation
+
