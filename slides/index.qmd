@@ -5,6 +5,7 @@ author: "Dr Nicola Rennie"
 format:
   LUstyle-revealjs:
     self-contained: true
+    auto-stretch: false
     footer: "{{< fa envelope >}} [n.rennie@lancaster.ac.uk](mailto:n.rennie@lancaster.ac.uk) {{< fa globe >}} [nrennie.rbind.io](https://nrennie.rbind.io/) {{< fa brands linkedin >}} [nicola-rennie](https://www.linkedin.com/in/nicola-rennie/)"
 ---
 
@@ -29,7 +30,7 @@ Blog about R and data science at [nrennie.rbind.io/blog](https://nrennie.rbind.i
 
 ::: {.column}
 
-![](images/CHICASlogo.png){fig-align="center" fig-alt="CHICAS logo" width=100%}
+![](images/CHICASlogo.png){fig-align="center" fig-alt="CHICAS logo" width=70%}
 
 :::
 :::
@@ -56,11 +57,15 @@ GitHub: [github.com/nrennie/f4sg-gams](https://github.com/nrennie/f4sg-gams)
 
 Slides: [nrennie.github.io/f4sg-gams](https://nrennie.github.io/f4sg-gams)
 
-# What are Generalised Additive Models? {background-color="#D9DBDB"}
-
 ## Data
 
-What is the data?
+We'll be modelling Covid-19 data during the workshop. The data is from the {COVID19} R package.
+
+* For Great Britain and France between January 2021 and January 2022.
+
+* For each day, data on cases, tests, vaccines, deaths, ...
+
+> Guidotti, E., Ardia, D., (2020), “COVID-19 Data Hub”, Journal of Open Source Software 5(51):2376, doi: [10.21105/joss.02376](10.21105/joss.02376).
 
 ## Data
 
@@ -68,12 +73,161 @@ How to download:
 
 ```{r}
 #| eval: false
+#| echo: true
 covid <- readr::read_csv("data/covid.csv")
 ```
 
-## Data
+# What are generalised additive models? {background-color="#D9DBDB"}
 
-## Data pre-processing
+## Sometimes relationships are easy to spot...
+
+```{r}
+#| eval: true
+#| echo: false
+#| layout-ncol: 2
+#| fig-height: 8
+#| message: false
+library(ggplot2)
+set.seed(20240221)
+n <- 40
+ggplot(data.frame(x = rnorm(n)), aes(x = x, y = x + rnorm(n, 0, 0.4))) +
+  geom_point(size = 3) +
+  labs(y = "y") +
+  theme_bw(base_size = 20)
+ggplot(data.frame(x = rnorm(n)), aes(x = x, y = x^2 + rnorm(n, 0, 0.5))) +
+  geom_point(size = 3) +
+  labs(y = "y") +
+  theme_bw(base_size = 20)
+```
+
+## Sometimes relationships are easy to spot...
+
+```{r}
+#| eval: true
+#| echo: false
+#| layout-ncol: 2
+#| fig-height: 8
+#| message: false
+set.seed(20240221)
+n <- 20
+ggplot(
+  data.frame(x = 1:n),
+  aes(x = x)
+) +
+  geom_function(fun = function(x) sin(x) + 0.25*x) +
+  labs(y = "y") +
+  theme_bw(base_size = 20)
+n <- 350
+ggplot(
+  data.frame(x = 1:n, y = as.numeric(arima.sim(list(order = c(1, 0, 0), ar = 0.5), n = n))),
+  aes(x = x, y = y)
+) +
+  geom_line() +
+  labs(y = "y") +
+  theme_bw(base_size = 20)
+
+```
+
+## Other times not so much!
+
+```{r}
+#| label: read-data
+#| fig-align: center
+#| fig-height: 7
+#| message: false
+library(dplyr)
+covid <- readr::read_csv("../data/covid.csv")
+gbr_data <- covid |> 
+  filter(iso_alpha_3 == "GBR") 
+ggplot(gbr_data) +
+  geom_line(aes(date, confirmed)) +
+  labs(x = "", y = "Daily confirmed cases") +
+  theme_bw(base_size = 22)
+```
+
+## What are generalised additive models?
+
+Let's start with linear models...
+
+::: {.center-text}
+
+$\mathbb{E}(Y) = \alpha + x_1 + x_2 + ... + x_p$
+
+:::
+
+::: {.fragment}
+
+<br>
+
+Then generalised linear models...
+
+::: {.center-text}
+
+$g(\mathbb{E}(Y)) = \alpha + x_1 + x_2 + ... + x_p$
+
+:::
+
+:::
+
+## What are generalised additive models?
+
+Generalised additive models are essentially just a sum of smooth functions of the explanatory variables.
+
+::: {.center-text}
+
+$g(\mathbb{E}(Y)) = s(x_1) + s(x_2) + ... + s(x_p)$
+
+:::
+
+::: {.fragment}
+
+```{r}
+#| eval: true
+#| echo: false
+#| layout-ncol: 3
+#| fig-height: 7
+set.seed(20240221)
+n <- 20
+ggplot(
+  data.frame(x = 1:n),
+  aes(x = x)
+) +
+  geom_function(fun = function(x) 0.5*x^2) +
+  labs(y = "y", title = bquote(s(x[1]))) +
+  theme_bw(base_size = 20)
+ggplot(
+  data.frame(x = 1:n),
+  aes(x = x)
+) +
+  geom_function(fun = function(x) 3 + 0.1*x^3) +
+  labs(y = "y", title = bquote(s(x[2]))) +
+  theme_bw(base_size = 20)
+ggplot(
+  data.frame(x = 1:n),
+  aes(x = x)
+) +
+  geom_function(fun = function(x) x) +
+  labs(y = "y", title = bquote(s(x[3]))) +
+  theme_bw(base_size = 20)
+```
+
+:::
+
+## What are generalised additive models?
+
+![](images/gams-flex.png){fig-align="center" fig-alt="GAMs complexity diagram" width=100%}
+
+## Generalised additive models in R
+
+There are several packages for fittings GAMs in R. The two main packages are:
+
+* {gam}
+
+* {mgcv}
+
+We'll be using {mgcv}.
+
+> Hint: don't load both packages at the same time!
 
 ## Live demo!
 
@@ -89,27 +243,52 @@ See `examples/example_01.R` for full code.
 
 Open `exercises/exercise_01.R` for prompts.
 
-* Instruction
+* Load the packages required for this workshop.
+
+* Load the data for the exercises. Subset it to look at France only.
+
+* Split the data into training and testing sets. 
+
+* Create a plot of confirmed cases over time.
+
+* Fit a linear model using the `gam()` function in {mgcv} with `confirmed` as the outcome, and `date_obs` as the explanatory variable.
+
+```{r}
+#| label: ex-1-timer
+countdown::countdown(
+  minutes = 10,
+  color_border = "#b20e10",
+  color_text = "#b20e10",
+  color_running_text = "white",
+  color_running_background = "#b20e10",
+  color_finished_text = "#b20e10",
+  color_finished_background = "white",
+  top = 0,
+  margin = "1.2em",
+  font_size = "2em"
+)
+```
 
 . . . 
 
 See `exercise_solutions/exercise_solutions_01.R` for full solution.
 
+# Generalised additive models in R {background-color="#D9DBDB"}
 
+## Fitting smooth functions 
 
-# What are generalised additive models? {background-color="#D9DBDB"}
+```{r}
+#| eval: false
+#| echo: true
+gam_0 <- gam(confirmed ~ date_obs, data = gbr_train)
+gam_1 <- gam(confirmed ~ s(date_obs), data = gbr_train)
+```
 
-## Sometimes the type of model is obvious
+## Additional arguments to the `gam()` function
 
-2x2 linear and seasonal patterns
+## How smooth is smooth enough?
 
-## noisy data - ar model
-
-## smooth
-
-example of smooth data
-
-# What are generalised additive models?
+## Multiple 
 
 ## Live demo!
 
@@ -154,7 +333,13 @@ Open `exercises/exercise_03.R` for prompts.
 
 See `exercise_solutions/exercise_solutions_03.R` for full solution.
 
+## Additional resources
 
+* GAMs resource list: [github.com/noamross/gam-resources](https://github.com/noamross/gam-resources)
+
+* {mgcv} course: [noamross.github.io/gams-in-r-course](https://noamross.github.io/gams-in-r-course/)
+
+* DGAMs for forecasting: [doi.org/10.1111/2041-210X.13974](https://doi.org/10.1111/2041-210X.13974)
 
 
 ## Useful links
