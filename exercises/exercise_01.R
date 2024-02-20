@@ -1,9 +1,10 @@
 # Load packages
-library(tidyverse)
 library(mgcv)
 
 # Load data
-covid <- read_csv("data/covid.csv")
+covid <- readr::read_csv(
+  "https://raw.githubusercontent.com/nrennie/f4sg-gams/main/data/covid.csv"
+)
 
 # Subset data to look at just FRA
 
