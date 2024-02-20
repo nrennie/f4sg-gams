@@ -26,7 +26,7 @@ jobs:
           
       - name: Install dependencies
         run: |
-          install.packages(c("ggplot2", "readr", "dplyr", "countdown"))
+          install.packages(c("ggplot2", "readr", "dplyr", "countdown", "rmarkdown", "knitr"))
         shell: Rscript {0}
 
       - name: Render and Publish
