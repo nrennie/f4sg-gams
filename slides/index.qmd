@@ -554,6 +554,10 @@ GitHub: [github.com/nrennie/f4sg-gams](https://github.com/nrennie/f4sg-gams)
 
 Slides: [nrennie.github.io/f4sg-gams](https://nrennie.github.io/f4sg-gams)
 
+<br>
+
+Posit Cloud: [posit.cloud/content/7637971](https://posit.cloud/content/7637971)
+
 ## 
 
 ::: columns
