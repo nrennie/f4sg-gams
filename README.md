@@ -10,6 +10,14 @@
 
 * Instructor: Dr Nicola Rennie (Lancaster University)
 
+### Resources
+
+* Slides: [nrennie.github.io/f4sg-gams](https://nrennie.github.io/f4sg-gams/)
+
+* GitHub: [github.com/nrennie/f4sg-gams](https://github.com/nrennie/f4sg-gams)
+
+* Posit Cloud: [posit.cloud/content/7637971](https://posit.cloud/content/7637971)
+
 ### Who is the training for?
 
 * Anyone who is interested in extending their knowledge beyond simple regression models and learning more about generalised additive models. 
